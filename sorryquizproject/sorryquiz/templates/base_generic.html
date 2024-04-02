@@ -1,0 +1,50 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{%block title%}Are you sure you are sorry? huh?!!!{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  <body>
+    
+    <nav>
+      <div class="nav-left">
+        <a href="{% url 'index' %}">Quizzes</a>
+      </div>
+      <div class="nav-right">
+        {% if user.is_authenticated %}
+        <form method="post" action = "{% url 'logout' %}">
+          {%csrf_token%}
+          <button method="submit">
+            Logout
+          </button>
+        </form>
+        {%else%}
+        <a href="{%url 'login' %}">login</a>      
+      {%endif%}
+      </div>
+    </nav>
+
+
+    {%block content%}{%endblock%}
+
+    <div class="parent-div">
+      <div class="centered-div">
+    {%if messages %}
+    <ul class="messages">
+      {%for message in messages%}
+      <li {% if message.tags %} class="{{message.tags}}" {%endif%}>
+        {{message}}
+      </li>
+      {%endfor%}
+    </ul>
+    {%endif%}
+
+  </div>
+</div>
+  </body>
+</html>

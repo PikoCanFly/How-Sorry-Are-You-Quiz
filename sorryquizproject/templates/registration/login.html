@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{%block content%}
+<div class="parent-div">
+    <div class="centered-div">
+       <form method="post" action={%url 'login'%}>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Login </submit>
+       </form>
+    </div>
+</div>
+{%endblock%}

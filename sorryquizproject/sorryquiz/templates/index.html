@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{%block content%}
+<div class="parent-div">
+    <div class="centered-div">
+        <h1> QUIZZES</h1>
+        <ul>
+        {%for quiz in quizzes%} 
+
+        <a href={% url 'quiz_detail' quiz.id %}>
+<li> {{quiz}}</li>
+        </a>
+
+{%endfor%}
+    </ul>
+    </div>
+</div>
+{%endblock%}

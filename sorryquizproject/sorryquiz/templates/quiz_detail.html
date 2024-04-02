@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{%block content%}
+<div class="parent-div">
+    <div class="centered-div">
+        <h3 class="title">
+        {{quiz.title}}
+        </h3>
+        <form method="post" id="quizform" action="{%url 'quiz_submit' quiz.id %}">
+            {%csrf_token%}
+
+    {%for question in questions%} 
+<h2> {{question.text}}</h2>
+{%for choice in question.choices.all%}
+<input type="radio" id="choice_{{choice.id}}" name="question_{{question.id}}" value="{{choice.id}}" />
+    <label for="choice_{{choice.id}}">{{choice.text}}</label>
+    <br>
+    {%endfor%}
+   
+
+{%endfor%}
+<button class="submit" type="submit">Submit Quiz</button>
+</form>
+    </div>
+</div>
+{%endblock%}

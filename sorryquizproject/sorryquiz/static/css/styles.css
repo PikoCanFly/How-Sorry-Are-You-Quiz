@@ -1,0 +1,68 @@
+:root {
+    --font-color : rgb(174, 174, 174);
+}
+
+
+body,html{
+    background: linear-gradient(black, rgba(0, 0, 0, 0.353));
+    height:100%;
+    color: var(--font-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    text-decoration: underline;
+}
+.centered-div{
+    align-items: center;
+    width:80%;
+    margin-top: 4rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    font-size: large;
+    padding-top: 1rem;
+    padding: 1em;
+    
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color)
+}
+
+.success{
+    color:green;
+}
+
+.error{
+    color:red;
+}
+
+button{
+    display:block;
+    width:100%;
+
+    font-size: large;
+    text-align: center;
+    background-color: black;
+    color: var(--font-color);
+    border: none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.submit{
+    padding:15px;
+    margin-top: 3rem;
+}
+
