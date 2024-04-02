@@ -1,5 +1,4 @@
-﻿﻿﻿[![Follow on GitHub](https://img.shields.io/github/followers/pikocanfly?label=Follow&style=flat)](https://github.com/pikocanfly)
-[![Support me on Patreon](https://img.shields.io/badge/Support%20me%20on-Patreon-orange.svg)](https://www.patreon.com/PikoCanFly)
+
 
 # Django-How-Sorry-Are-You-Quiz
 
